@@ -7,8 +7,8 @@ apk -U add --virtual temp python-dev py-pip alpine-sdk python py-setuptools
 
 # Install python dependencies
 pip install --upgrade pip
-pip install -r https://raw.githubusercontent.com/projectcalico/libcalico/master/build-requirements-frozen.txt
-pip install git+https://github.com/projectcalico/libcalico.git
+pip install -r https://raw.githubusercontent.com/HuKeping/libcalico/master/build-requirements-frozen.txt
+pip install git+https://github.com/HuKeping/libcalico.git
 pip install simplejson 
 
 # Produce a binary - outputs to /dist/controller
