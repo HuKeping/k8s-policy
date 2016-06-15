@@ -110,6 +110,7 @@ class PolicyParser(object):
                 else:
                     raise PolicyError("Unknown operator: %s" % operator)
 
+        _log.debug("calico_selectors: %s", calico_selectors)
         return calico_selectors
 
     def _allow_incoming_to_rules(self, allow_incoming_clause):
