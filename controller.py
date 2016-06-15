@@ -425,14 +425,12 @@ class Controller(object):
         Returns True if this policy controller instance has been elected leader,
         False otherwise.
         """
-        _log.debug("Checking if we are the elected leader.")
         response = requests.get(self._leader_election_url)
         response = response.json()
 
         # Determine if we're the leader.
         our_name = os.environ.get("HOSTNAME")
         leader_name = response["name"]
-        _log.debug("Elected leader is: %s. We are: %s", leader_name, our_name)
         return our_name == leader_name
 
 
